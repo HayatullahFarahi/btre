@@ -29,7 +29,7 @@ class Listing(models.Model):
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
 
-    # choosing main field
+    # choosing main field and display name in admin dashboard
 
     def __str__(self):
         return self.title
