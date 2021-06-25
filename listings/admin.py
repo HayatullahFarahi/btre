@@ -13,6 +13,10 @@ class ListingAdmin(admin.ModelAdmin):
     list_filter = ('realtor', 'state', 'bedrooms', 'is_published',)
     # make editable published field
     list_editable = ('is_published',)
+    search_fields = ('title', 'description', 'address',
+                     'city', 'state', 'zipcode', 'price')
+    # pagination
+    list_per_page = 10
 
 
     # to be able to add listing from admin panel
