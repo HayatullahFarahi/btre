@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # putting comma in price
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -130,7 +132,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-# MEDIA FOLDER SETTINGS
+# TODO: MEDIA FOLDER SETTINGS
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
