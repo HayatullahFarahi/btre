@@ -4,6 +4,7 @@ from .choices import price_choices, bedroom_choices, state_choices
 
 
 from .models import Listing
+from dotenv import dotenv_values
 
 
 def index(request):
@@ -20,6 +21,10 @@ def index(request):
 
 
 def listing(request, listing_id):
+    config = dotenv_values(".env")
+    print('ENV VALUES TEST')
+    print(config)
+    print(config['SECRET'])
     listing = get_object_or_404(Listing, pk=listing_id)
 
     context = {
